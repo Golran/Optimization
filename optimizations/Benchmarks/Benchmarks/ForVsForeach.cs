@@ -3,6 +3,8 @@ using BenchmarkDotNet.Attributes;
 
 namespace Benchmarks.Benchmarks;
 
+[SimpleJob(warmupCount: 5, iterationCount: 13)]
+[MemoryDiagnoser]
 [DisassemblyDiagnoser]
 public class ForVsForeach
 {
